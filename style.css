@@ -24,7 +24,7 @@ header
  display: flex;
  justify-content: space-between;
  align-items: center;
- background: transparent;
+ background: #3c3c3c;
  height: 8vh;
  z-index: 0;
 }
