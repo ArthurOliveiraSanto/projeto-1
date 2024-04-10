@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 
+'apple-touch-icon-retina.png')}">
+    <title>Principal</title>
+</head>
+<body>
+
+    <nav id="navbar" class="navbar">
+        <a href="index.html" class="brand">SNEAKS</a>
+        <ul>
+            <li><a href="#">loja</a></li>
+            <li><a href="#">Personalização </a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Compras</a></li>
+        </ul>
+    </nav>
+
+<div class="square"></div>
+    <section class="home">
+        <div class="home-img">
+            <img src="product16.png" class="one">
+        </div><!--home-img-->
+
+        <div class="home-text">
+
+            <h1>Yeezy <br>Boost</h1>
+            <h5>Um tênis do caro</h5>
+            <h3>R$4499.99</h3>
+            <button>Garanta o seu</button>
+            
+        </div><!--home-text-->
+    </section><!--home-->
+
+
+    <div class="main">
+        <div class="row">
+            <li><img src="main16.png" onclick="slider('product16.png')"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img src="main17.png" onclick="slider('product17.png')"></li>
+        </div><!--row2-->
+
+        <div class="row3">
+            <li><img src="main18.png" onclick="slider('product18.png')"></li>
+        </div><!--row3-->
+    </div><!--main-->
+
+
+
+
+     
+  
+    <script>
+        function slider (anything){
+            document.querySelector ('.one') .src = anything;
+        };
+
+       let menu = document.querySelector ('#menu-icon');
+       let navbar = document.querySelector ('.navbar');
+
+       menu.onclick = () => {
+        menu.classList.toggle ('bx-x');
+        navbar.classList.toggle ('open');
+       }
+    </script>
+    
+</body>
+</html>

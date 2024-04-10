@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 
+'apple-touch-icon-retina.png')}">
+    <title>Principal</title>
+</head>
+<body>
+
+    <nav id="navbar" class="navbar">
+        <a href="#" class="brand">SNEAKS</a>
+        <ul>
+            <li><a href="#">Nossas Lojas</a></li>
+            <li><a href="#">Personalização </a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Compras</a></li>
+        </ul>
+    </nav>
+
+    <section class="videobg" id="video1">
+        <video src="assets/Hero Pages/v1.mp4" type="video/mp4" autoplay loop muted plays-inline class="video" ></video>
+        <h2>Nike</h2>
+        <a href="Compra.html"><button>Vá para a loja</button></a>
+    </section>
+      
+    <section class="videobg" id="video2">
+        <video src="assets/Hero Pages/v2.mp4" type="video/mp4" autoplay loop muted plays-inline class="video" ></video>
+        <h2>Adidas</h2>
+        <a href="Compra1.html"><button>Vá para a loja</button></a>
+    </section>
+    <section class="services">
+        <h2>Services</h2>
+        <div class="grid">
+            <div class="grid-item">
+                <div class="card">
+                    <img class="card-image" src="assets/Service Pages/Service_image1.jpg" alt="service img 1">
+                    <div class="card-content">
+                        <h1>Promoções</h1>
+                        <p>Veja todos os tênis que estão em promoção nesse momento</p>
+                        <button class="card-btn">Clique aqui</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="card">
+                    <img class="card-image" src="assets/Service Pages/image-21.png" alt="service img 2">
+                    <div class="card-content">
+                        <h1>Tire dúvidas</h1>
+                        <p>Tire qualquer dúvida com nosso suporte 24 horas.</p>
+                        <button class="card-btn">Clique aqui</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="card">
+                    <img class="card-image" src="assets/Service Pages/Service_image3.jpg" alt="service img 3">
+                    <div class="card-content">
+                        <h1>Personalize</h1>
+                        <p>Faça o tênis do jeito que quiser</p>
+                        <button class="card-btn">Clique aqui</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </section>
+
+    <div class="last-logo">SNEAKS</div>
+    <script>
+        var lastScrollTop = 0;
+        navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            navbar.style.top = "-100px";
+        } else {
+            navbar.style.top = "0";
+            if (scrollTop === 0) {
+                navbar.classList.remove("scrolled"); 
+            } else {
+                navbar.classList.add("scrolled"); 
+                }
+            }
+        lastScrollTop = scrollTop;
+        }
+        );
+
+
+
+//Accordian
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                var panel = this.nextElementSibling;
+                var isActive = this.classList.contains("active");
+
+                // Close all accordion panels
+
+                for (var j = 0; j < acc.length; j++) {
+                    var otherPanel = acc[j].nextElementSibling;
+                    if (otherPanel !== panel) {
+                        otherPanel.style.maxHeight = null;
+                        acc[j].classList.remove("active");
+                    }
+                }
+
+                if (isActive) {
+                    this.classList.remove("active");
+                    panel.style.maxHeight = null;
+                } else {
+                    this.classList.add("active");
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                }
+            );
+        }
+
+
+    </script>
+</body>
+</html>
